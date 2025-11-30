@@ -1,0 +1,43 @@
+public class User {
+
+    private int user_id;
+    private String name;
+    private String email;
+    private int phone_number;
+    private int license_number;
+    boolean license_flag;
+
+    // Booking[]history_array ;     // an array of objects from Booking class 
+    public User(int user_id, String name, String email, int phone_number, int license_number) {
+        this.user_id = user_id;
+        this.name = name;
+        this.email = email;
+        this.phone_number = phone_number;
+        this.license_number = license_number;
+    }
+
+    private boolean check() {
+        if (license_number == 333 || license_number == 222 || license_number == 111) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    public void verify_license() {
+        if (license_number == 333 || license_number == 222 || license_number == 111) {   // imag  valid license numbers , in real , it should check it from هيئه المرور
+            license_flag = true;
+        } else {
+            license_flag = false;
+        }
+        if (license_flag == true) {
+            System.out.println("valid license :) ");       // we should in the booking class to put a condition that (if) license_flag = true to continue in the operation , (else) break .
+
+        } else if (license_flag = false) {
+            System.out.println("invalid license :( ");
+        }
+
+    }
+
+}
